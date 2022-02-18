@@ -2,6 +2,7 @@ import { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import HousesView from "../views/HousesView.vue";
 import HouseView from "../views/HouseView.vue";
+import AddHouseView from "../views/AddHouseView.vue";
 
 const routes: Array<RouteConfig> = [
   {
@@ -19,6 +20,11 @@ const routes: Array<RouteConfig> = [
     props: true,
     name: "House",
     component: HouseView,
+  },
+  {
+    path: "/create",
+    name: "Create",
+    component: AddHouseView,
   },
 ];
 

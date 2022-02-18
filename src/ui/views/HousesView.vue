@@ -8,6 +8,7 @@
         <button @click="deleteHouse(house._id)">DELETE</button>
       </li>
     </ul>
+    <button @click="navigateToForm">ADD NEW</button>
   </div>
 </template>
 
@@ -32,6 +33,12 @@ export default class HousesView extends Vue {
 
   public deleteHouse(id: string): void {
     this.deleteHouseByID(id);
+  }
+
+  public navigateToForm(): void {
+    this.$router.push({
+      path: "/create",
+    });
   }
 
   created(): void {
